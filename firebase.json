@@ -1,0 +1,154 @@
+{
+  "hosting": {
+    "public": "dist",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  },
+  "advanced-react-ecommerce": {
+    ".github": {
+      "copilot-instructions.md": "Your coding guidelines"
+    },
+    "public": {
+      "index.html": ""
+    },
+    "src": {
+      "components": {
+        "Header.jsx": "",
+        "Header.module.css": "",
+        "ProductCard.jsx": "",
+        "ProductCard.module.css": ""
+      },
+      "hooks": {
+        "useProducts.js": "",
+        "useCart.js": ""
+      },
+      "store": {
+        "store.js": "",
+        "cartSlice.js": ""
+      },
+      "services": {
+        "fakeStoreApi.js": "",
+        "firestoreService.js": ""
+      },
+      "utils": {
+        "constants.js": ""
+      },
+      "App.jsx": "",
+      "App.css": "",
+      "main.jsx": ""
+    },
+    ".gitignore": "",
+    "firebase.json": "",
+    "package.json": "",
+    "vite.config.js": "",
+    "README.md": ""
+  },
+  "dependencies": {
+    "node_modules/": {},
+    "npm-debug.log*": {},
+    "yarn-debug.log*": {},
+    "yarn-error.log*": {},
+    "dist/": {},
+    "build/": {},
+    ".env": {},
+    ".env.local": {},
+    ".env.development.local": {},
+    ".env.test.local": {},
+    ".env.production.local": {},
+    ".firebase/": {},
+    "firebase-debug.log": {},
+    ".vscode/": {},
+    ".DS_Store": {},
+    "Thumbs.db": {}
+  },
+  "name": "advanced-react-ecommerce",
+  "version": "1.0.0",
+  "description": "Advanced React e-commerce application with Firebase integration",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "format": "prettier --write ."
+  },
+  "keywords": [
+    "react",
+    "ecommerce",
+    "firebase",
+    "redux-toolkit",
+    "react-query",
+    "vite"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.9.7",
+    "firebase": "^10.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.1.3",
+    "react-router-dom": "^6.17.0",
+    "@tanstack/react-query": "^4.35.3"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react": "^4.0.3",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "prettier": "^3.0.3",
+    "vite": "^4.4.5"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-react"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:react/recommended",
+      "plugin:prettier/recommended"
+    ],
+    "rules": {
+      "react/react-in-jsx-scope": "off"
+    }
+  },
+  "prettier": {
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "all"
+  },
+  "env": {
+    "VITE_FIREBASE_API_KEY": "your_api_key_here",
+    "VITE_FIREBASE_AUTH_DOMAIN": "your_project.firebaseapp.com",
+    "VITE_FIREBASE_PROJECT_ID": "your_project_id",
+    "VITE_FIREBASE_STORAGE_BUCKET": "your_project.appspot.com",
+    "VITE_FIREBASE_MESSAGING_SENDER_ID": "your_sender_id",
+    "VITE_FIREBASE_APP_ID": "your_app_id"
+  },
+  "vite": {
+    "plugins": [
+      "@vitejs/plugin-react"
+    ],
+    "build": {
+      "outDir": "dist",
+      "sourcemap": true
+    },
+    "server": {
+      "port": 3000,
+      "open": true
+    }
+  },
+  "readme": "# 🛍️ Advanced React E-Commerce Application\n\nAn advanced React e-commerce application demonstrating modern React patterns, state management, and Firebase integration.\n\n## ✨ Features\n\n- 📱 **Product Catalog** - Browse products with category filtering\n- 🛒 **Shopping Cart** - Add/remove items with Redux Toolkit state management\n- 🔐 **Authentication** - Firebase Auth integration\n- 📦 **Order Management** - Place orders and view history with Firestore\n- 💾 **Session Storage** - Cart persistence across browser sessions\n- 📱 **Responsive Design** - Mobile-first CSS Modules styling\n- ⚡ **Performance** - React Query for data fetching and caching\n\n## 🚀 Tech Stack\n\n- **React 18** with Vite for fast development\n- **Redux Toolkit** for state management (shopping cart)\n- **React Query (TanStack Query)** for data fetching and caching\n- **Firebase** for authentication and Firestore database\n- **FakeStoreAPI** for product data\n- **CSS Modules** for component styling\n- **React Router** for navigation\n\n## 🏗️ Architecture\n\n- **Component-based architecture** with clear separation of concerns\n- **Custom hooks** for API interactions\n- **Redux Toolkit** for predictable state management\n- **CSS Modules** for scoped component styling\n- **Firebase integration** for backend services\n\n## 📦 Installation\n\n1. **Clone the repository**\n   ```bash\n   git clone https://github.com/yourusername/advanced-react-ecommerce.git\n   cd advanced-react-ecommerce\n   ```\n\n2. **Install dependencies**\n   ```bash\n   npm install\n   ```\n\n3. **Set up environment variables**\n   ```bash\n   cp .env.example .env\n   ```\n   Edit `.env` with your Firebase configuration\n\n4. **Start development server**\n   ```bash\n   npm run dev\n   ```\n\n## 🔧 Environment Setup\n\nCreate a `.env` file in the root directory with your Firebase configuration:\n\n```env\nVITE_FIREBASE_API_KEY=your_api_key\nVITE_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com\nVITE_FIREBASE_PROJECT_ID=your_project_id\nVITE_FIREBASE_STORAGE_BUCKET=your_project.appspot.com\nVITE_FIREBASE_MESSAGING_SENDER_ID=your_sender_id\nVITE_FIREBASE_APP_ID=your_app_id\n```\n\n## 📁 Project Structure\n\n```\nsrc/\n├── components/          # React components with CSS Modules\n│   ├── Header.jsx\n│   ├── Header.module.css\n│   ├── ProductCard.jsx\n│   └── ProductCard.module.css\n├── hooks/              # Custom hooks for API interactions\n│   ├── useProducts.js\n│   └── useCart.js\n├── store/              # Redux Toolkit state management\n│   ├── store.js\n│   └── cartSlice.js\n├── services/           # API integration\n│   ├── fakeStoreApi.js\n│   └── firestoreService.js\n├── utils/              # Utility functions\n│   └── constants.js\n├── App.jsx\n├── App.css\n└── main.jsx\n```\n\n## 🌐 API Integration\n\n- **FakeStoreAPI** (https://fakestoreapi.com/) for product listings\n- **Firebase Firestore** for user data and orders\n- **Firebase Auth** for user authentication\n\n## 🎨 Code Style\n\n- Functional components with hooks\n- CSS Modules for styling\n- Consistent naming conventions\n- Proper error boundaries\n- Loading and error state handling\n- Responsive design patterns\n\n## 📋 Available Scripts\n\n- `npm run dev` - Start development server\n- `npm run build` - Build for production\n- `npm run preview` - Preview production build\n- `npm run lint` - Run ESLint\n- `npm run format` - Format code with Prettier\n\n## 🚀 Deployment\n\nThe app is configured for Firebase Hosting:\n\n```bash\nnpm run build\nfirebase deploy\n```\n\n## 🤝 Contributing\n\n1. Fork the repository\n2. Create your feature branch (`git checkout -b feature/AmazingFeature`)\n3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)\n4. Push to the branch (`git push origin feature/AmazingFeature`)\n5. Open a Pull Request\n\n## 📄 License\n\nThis project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.\n\n## 🙏 Acknowledgments\n\n- [FakeStoreAPI](https://fakestoreapi.com/) for product data\n- [Firebase](https://firebase.google.com/) for backend services\n- [Redux Toolkit](https://redux-toolkit.js.org/) for state management\n- [React Query](https://tanstack.com/query) for data fetching\n\n## **Step 7: Prepare for GitHub**\n\n#### **Commands to initialize Git and prepare for GitHub:**\n\n````bash\n# Navigate to your project directory\ncd \"c:\\Users\\dhadl\\OneDrive\\Desktop\\Advanced React\\firebase ecommerce\\advanced-react-ecommerce\"\n\n# Initialize Git (if not already done)\ngit init\n\n# Add all files\ngit add .\n\n# Create initial commit\ngit commit -m \"feat: Initial commit - Advanced React E-Commerce Application\n\n- Complete Firebase e-commerce app with component-based architecture\n- Redux Toolkit state management for shopping cart\n- React Query integration for data fetching and caching\n- Firebase Auth and Firestore integration\n- FakeStoreAPI integration for product catalog\n- CSS Modules for component styling\n- Responsive design patterns\n- Session storage cart persistence\n\nFeatures: Product catalog, shopping cart, authentication, order management\nTech Stack: React 18, Redux Toolkit, Firebase, React Query, Vite\"\n````
